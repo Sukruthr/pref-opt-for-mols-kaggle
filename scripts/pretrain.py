@@ -73,7 +73,7 @@ def train(model, config, train_loader, test_loader=None):
 
 def load_moses(split="train"):
     assert split in ["train", "test"]
-    return pd.read_csv(f"/kaggle/input/dpofile/{split}.csv").rename(columns={"SMILES": "smiles"})["smiles"].tolist()
+    return pd.read_csv(f"/kaggle/input/dpo_files/{split}.csv").rename(columns={"SMILES": "smiles"})["smiles"].tolist()
 
 
 if __name__ == "__main__":
